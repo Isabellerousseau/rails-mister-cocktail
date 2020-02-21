@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-3">
+
+      <h1>Add a new cocktail</h1>
+      <%= simple_form_for @cocktail do |f| %>
+      <%= f.input :name, placeholder: 'Cocktail name please', error: 'cocktail name is mandatory, please specify one' %>
+      <%=render 'doses/miniform', f: f %>
+      <%= link_to "Add another dose", new_dose_path, remote: true %>
+        <%= f.button :submit %>
+      </div>
+      <% end %>
+
+      <%= link_to "cancel", cocktails_path %>
+    </div>
+  </div>
+</div>
+

@@ -11,3 +11,23 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.home-banner{
+  background-image: url('https://images.unsplash.com/photo-1542849187-5ec6ea5e6a27?ixlib=rb-1.2.1&auto=format&fit=crop&w=747&q=80');
+  background-size: cover;
+  height: 100vh;
+  color: #eee;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+.buttonsList {
+  list-style: none;
+  padding: 0;
+}
+
+i {
+  color: black;
+  font-size: 15px;
+  margin-top: 3px;
+}
