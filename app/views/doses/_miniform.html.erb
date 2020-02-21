@@ -1,4 +1,0 @@
-<%= f.simple_fields_for :dose do |c| %>
-  <%= c.input :ingredient, collection: Ingredient.all, error: 'ingredient is mandatory, please specify one'%>
-  <%= c.input :description, placeholder: 'describe the cocktail please', error: 'cocktail name is mandatory, please specify one' %>
-<% end %>
