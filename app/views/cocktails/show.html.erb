@@ -19,7 +19,7 @@
 
         <h2>Add a new dose</h2>
         <%= simple_form_for [@cocktail, @dose] do |f| %>
-        <%= f.association :ingredient, error: 'ingredient is mandatory, please specify one'%>
+        <%= f.association :ingredient, input_html: { class: 'select2'}, error: 'ingredient is mandatory, please specify one'%>
         <%= f.input :description, placeholder: 'describe the cocktail please', error: 'cocktail name is mandatory, please specify one' %>
         <%= f.button :submit,{class: "btn btn-secondary"} %>
         <% end %>
@@ -30,7 +30,6 @@
             <% end %>
           </li>
         </ul>
-
       </div>
     </div>
   </div>
