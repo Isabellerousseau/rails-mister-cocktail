@@ -8,7 +8,7 @@
 
   <div class="cocktail-grid">
     <% @cocktails.each do |cocktail| %>
-    <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random/600x800);">
+    <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.attached? ? cocktail.photo.key : "pn4d9wzxnc9advmnrniw", width: 400, height: 300, crop: :fill %>');">
       <h3><%= link_to "#{cocktail.name}", cocktail_path(cocktail.id) %></h3>
       <%= link_to cocktail_path(cocktail), class: 'cocktail-delete', method: :delete, data: { confirm: "Are you sure?" } do %>
       <i class="fas fa-trash-alt"></i>
